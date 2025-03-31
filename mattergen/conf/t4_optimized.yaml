@@ -1,0 +1,47 @@
+hydra:
+  run:
+    dir: ${oc.env:OUTPUT_DIR,outputs/singlerun/${now:%Y-%m-%d}/${now:%H-%M-%S}}
+
+defaults:
+  - data_module: mp_20
+  - trainer: default
+  - lightning_module: default
+  - adapter: default
+
+trainer:
+  max_epochs: 200
+  precision: 16  # Enable mixed precision training
+  accumulate_grad_batches: 4  # Increase gradient accumulation to compensate for smaller batch size
+  devices: 1
+  num_nodes: 1
+  strategy:
+    _target_: pytorch_lightning.strategies.ddp.DDPStrategy
+    find_unused_parameters: true
+
+data_module:
+  batch_size:
+    # Reduced batch sizes to fit in T4 memory
+    train: ${eval:'(128 // ${trainer.accumulate_grad_batches}) // (${trainer.devices} * ${trainer.num_nodes})'}
+    val: ${eval:'(32 // (${trainer.devices} * ${trainer.num_nodes}))'}
+    test: ${eval:'(32 // (${trainer.devices} * ${trainer.num_nodes}))'}
+  num_workers:
+    train: 0
+    val: 0
+    test: 0
+
+lightning_module:
+  optimizer_partial:
+    lr: 5e-6
+  diffusion_module:
+    model:
+      hidden_dim: 512
+      gemnet:
+        max_neighbors: 30  # Reduced from 50 to save memory
+        max_cell_images_per_dim: 3  # Reduced from 5 to save memory
+        num_blocks: 3  # Reduced from 4 to save memory
+        emb_size_atom: 384  # Reduced from 512 to save memory
+        emb_size_edge: 384  # Reduced from 512 to save memory
+        emb_size_trip: 48  # Reduced from 64 to save memory
+        emb_size_rbf: 12  # Reduced from 16 to save memory
+        emb_size_cbf: 12  # Reduced from 16 to save memory
+        emb_size_bil_trip: 48  # Reduced from 64 to save memory 
