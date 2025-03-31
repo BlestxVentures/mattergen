@@ -98,6 +98,7 @@ url = "https://download.pytorch.org/whl/cu121"
 explicit = true
 
 
+
 [project.scripts]
 mattergen-generate = "mattergen.scripts.generate:_main"
 mattergen-train = "mattergen.scripts.run:mattergen_main"
