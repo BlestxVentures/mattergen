@@ -76,20 +76,20 @@ torch = { index = "pytorch_linux",  marker = "sys_platform == 'linux'" }
 torchvision = { index = "pytorch_linux",  marker = "sys_platform == 'linux'" }
 torchaudio = { index = "pytorch_linux",  marker = "sys_platform == 'linux'" }
 pyg-lib = [
-  { url = "https://data.pyg.org/whl/torch-2.5.1%2Bcu121/pyg_lib-0.4.0%2Bpt25cu121-cp310-cp310-linux_x86_64.whl",  marker = "sys_platform == 'linux'" },
-  { url = "https://data.pyg.org/whl/torch-2.5.1%2Bcpu/pyg_lib-0.4.0%2Bpt25-cp310-cp310-macosx_14_0_universal2.whl",  marker = "sys_platform == 'darwin'" }
+  { url = "https://data.pyg.org/whl/torch-2.5.0%2Bcu121/pyg_lib-0.4.0%2Bpt25cu121-cp310-cp310-linux_x86_64.whl",  marker = "sys_platform == 'linux'" },
+  { url = "https://data.pyg.org/whl/torch-2.5.0%2Bcpu/pyg_lib-0.4.0%2Bpt25-cp310-cp310-macosx_14_0_universal2.whl",  marker = "sys_platform == 'darwin'" }
 ]
 torch_cluster = [
-  { url = "https://data.pyg.org/whl/torch-2.5.1%2Bcu121/torch_cluster-1.6.3%2Bpt25cu121-cp310-cp310-linux_x86_64.whl",  marker = "sys_platform == 'linux'" },
-  { url = "https://data.pyg.org/whl/torch-2.5.1%2Bcpu/torch_cluster-1.6.3-cp310-cp310-macosx_10_9_universal2.whl",  marker = "sys_platform == 'darwin'"  }
+  { url = "https://data.pyg.org/whl/torch-2.5.0%2Bcu121/torch_cluster-1.6.3%2Bpt25cu121-cp310-cp310-linux_x86_64.whl",  marker = "sys_platform == 'linux'" },
+  { url = "https://data.pyg.org/whl/torch-2.5.0%2Bcpu/torch_cluster-1.6.3-cp310-cp310-macosx_10_9_universal2.whl",  marker = "sys_platform == 'darwin'"  }
 ]
 torch_scatter = [
-  { url = "https://data.pyg.org/whl/torch-2.5.1%2Bcu121/torch_scatter-2.1.2%2Bpt25cu121-cp310-cp310-linux_x86_64.whl",  marker = "sys_platform == 'linux'" },
-  { url = "https://data.pyg.org/whl/torch-2.5.1%2Bcpu/torch_scatter-2.1.2-cp310-cp310-macosx_10_9_universal2.whl",  marker = "sys_platform == 'darwin'"  }
+  { url = "https://data.pyg.org/whl/torch-2.5.0%2Bcu121/torch_scatter-2.1.2%2Bpt25cu121-cp310-cp310-linux_x86_64.whl",  marker = "sys_platform == 'linux'" },
+  { url = "https://data.pyg.org/whl/torch-2.5.0%2Bcpu/torch_scatter-2.1.2-cp310-cp310-macosx_10_9_universal2.whl",  marker = "sys_platform == 'darwin'"  }
 ]
 torch_sparse = [
-  { url = "https://data.pyg.org/whl/torch-2.5.1%2Bcu121/torch_sparse-0.6.18%2Bpt25cu121-cp310-cp310-linux_x86_64.whl",  marker = "sys_platform == 'linux'" },
-  { url = "https://data.pyg.org/whl/torch-2.5.1%2Bcpu/torch_sparse-0.6.18-cp310-cp310-macosx_11_0_universal2.whl",  marker = "sys_platform == 'darwin'"  }
+  { url = "https://data.pyg.org/whl/torch-2.5.0%2Bcu121/torch_sparse-0.6.18%2Bpt25cu121-cp310-cp310-linux_x86_64.whl",  marker = "sys_platform == 'linux'" },
+  { url = "https://data.pyg.org/whl/torch-2.5.0%2Bcpu/torch_sparse-0.6.18-cp310-cp310-macosx_11_0_universal2.whl",  marker = "sys_platform == 'darwin'"  }
 ]
 
 [[tool.uv.index]]
