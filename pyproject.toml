@@ -57,7 +57,7 @@ dependencies = [
 "tqdm",
 "wandb>=0.10.33",
 "torch==2.5.0+cu121; sys_platform == 'linux'",
-"torchvision==0.16.1+cu121; sys_platform == 'linux'",
+"torchvision==0.16.0+cu121; sys_platform == 'linux'",
 "torchaudio==2.5.0+cu121; sys_platform == 'linux'",
 "torch==2.4.1; sys_platform == 'darwin'",
 "torchvision==0.19.1; sys_platform == 'darwin'",
